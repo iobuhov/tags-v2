@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kodak Gold labels</title>
+  </head>
+  <body>
+    <style>
+      :root {
+        --spacing: 14px;
+        --color-kodak-red: #ce2f1e;
+        --color-kodak-yellow: #ffc600;
+        --color-portra: #a587c4;
+        --color-gold: #a832ae;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1mm;
+        margin: 1cm;
+        font-family: Helvetica;
+      }
+      .tag {
+        aspect-ratio: 1;
+        width: 32mm;
+        height: 32mm;
+        overflow: hidden;
+        border-radius: 0;
+        position: relative;
+      }
+      .header,
+      .body {
+        height: 50%;
+        display: flex;
+        padding: var(--spacing);
+      }
+      .header {
+        background-color: #ffc600;
+        align-items: end;
+        color: var(--color-kodak-red);
+        font-size: 20px;
+        font-weight: bold;
+        padding-bottom: 0;
+      }
+      .body {
+        font-size: 10px;
+        flex-flow: row nowrap;
+        color: white;
+        background: var(--color-gold);
+        text-transform: uppercase;
+        padding-top: 4px;
+        justify-content: center;
+      }
+      .header .info {
+        color: black;
+        font-size: 10px;
+        display: flex;
+        flex-flow: column nowrap;
+      }
+      .brand {
+      }
+      .exp {
+        border-bottom: 1px solid;
+      }
+      .exp .sm {
+        font-size: 6px;
+      }
+      .dbl {
+        font-size: 6px;
+      }
+      .kind {
+        font-size: 20px;
+      }
+      .body .right,
+      .header .info {
+        margin-left: 4px;
+      }
+      .point {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        margin: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: white;
+        z-index: 3;
+        border-radius: 50%;
+      }
+    </style>
+    <template id="ftag">
+      <div class="tag">
+        <div class="header">
+          <div class="brand">Kodak</div>
+          <div class="info">
+            <div class="exp">24 <span class="sm">EXP.</span></div>
+            <div class="iso">200</div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="left kind">GOLD</div>
+          <div class="right">
+            <div class="dbl">DEVELOP BEFORE</div>
+            <div class="dbd">03/2026</div>
+          </div>
+        </div>
+        <div class="point"></div>
+      </div>
+    </template>
+
+    <script>
+      const num = 20;
+      const tag = document.querySelector('#ftag');
+      for (let n = 0; n < num; n += 1) {
+        document.body.append(tag.content.cloneNode(true));
+      }
+    </script>
+  </body>
+</html>

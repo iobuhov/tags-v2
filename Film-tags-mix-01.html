@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <title>Film tags</title>
+  </head>
+  <body>
+    <template id="fk-gold">
+      <div class="tag kodak-gold">
+        <div class="header">
+          <div class="brand">Kodak</div>
+          <div class="info">
+            <div class="exp">
+              <span class="ecount">24</span>
+              <span class="sm">EXP.</span>
+            </div>
+            <div class="iso">200</div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="left kind">Gold</div>
+          <div class="right">
+            <div class="dbl">DEVELOP BEFORE</div>
+            <div class="dbd">03/2026</div>
+          </div>
+        </div>
+        <div class="point"></div>
+      </div>
+    </template>
+    <template id="fk-umax">
+      <div class="tag kodak-umax">
+        <div class="header">
+          <div class="brand">Kodak</div>
+          <div class="info">
+            <div class="exp">
+              <span class="ecount">-</span>
+              <span class="sm">EXP.</span>
+            </div>
+            <div class="iso">400</div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="left kind">UltraMax</div>
+          <div class="right">
+            <div class="dbl">DEVELOP BEFORE</div>
+            <div class="dbd">-</div>
+          </div>
+        </div>
+        <div class="point"></div>
+      </div>
+    </template>
+    <template id="fk-portra">
+      <div class="tag kodak-portra">
+        <div class="header">
+          <div class="brand">Kodak</div>
+          <div class="info">
+            <div class="exp">
+              <span class="ecount">-</span>
+              <span class="sm">EXP.</span>
+            </div>
+            <div class="iso">400</div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="left kind">Portra</div>
+          <div class="right">
+            <div class="dbl">DEVELOP BEFORE</div>
+            <div class="dbd">-</div>
+          </div>
+        </div>
+        <div class="point"></div>
+      </div>
+    </template>
+    <template id="fk-cplus">
+      <div class="tag kodak-cplus">
+        <div class="header">
+          <div class="brand">Kodak</div>
+          <div class="info">
+            <div class="exp">
+              <span class="ecount">-</span>
+              <span class="sm">EXP.</span>
+            </div>
+            <div class="iso">200</div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="left kind">ColorPlus</div>
+          <div class="right">
+            <div class="dbl">DEVELOP BEFORE</div>
+            <div class="dbd">-</div>
+          </div>
+        </div>
+        <div class="point"></div>
+      </div>
+    </template>
+    <!-- <script>
+      {
+        const num = 20;
+        const tag = document.querySelector('#fk-gold');
+        for (let n = 0; n < num; n += 1) {
+          document.body.append(tag.content.cloneNode(true));
+        }
+      }
+    </script> -->
+    <script>
+      {
+        const num = 3;
+        const ecount = 36;
+        const date = "04/2027"
+        const tag = document.querySelector('#fk-umax');
+
+        for (let n = 0; n < num; n += 1) {
+          const elt = tag.content.cloneNode(true)
+          elt.querySelector(".ecount").textContent=ecount;
+          elt.querySelector(".dbd").textContent=date;
+          document.body.append(elt);
+        }
+      }
+    </script>
+    <script>
+      {
+        const num = 3;
+        const ecount = 36;
+        const date = "07/2027"
+        const tag = document.querySelector('#fk-umax');
+
+        for (let n = 0; n < num; n += 1) {
+          const elt = tag.content.cloneNode(true)
+          elt.querySelector(".ecount").textContent=ecount;
+          elt.querySelector(".dbd").textContent=date;
+          document.body.append(elt);
+        }
+      }
+    </script>
+    <script>
+      {
+        const num = 2;
+        const ecount = 24;
+        const date = "03/2026"
+        const tag = document.querySelector('#fk-umax');
+
+        for (let n = 0; n < num; n += 1) {
+          const elt = tag.content.cloneNode(true)
+          elt.querySelector(".ecount").textContent=ecount;
+          elt.querySelector(".dbd").textContent=date;
+          document.body.append(elt);
+        }
+      }
+    </script>
+    <script>
+      {
+        const num = 1;
+        const ecount = 24;
+        const date = "06/2026"
+        const tag = document.querySelector('#fk-gold');
+
+        for (let n = 0; n < num; n += 1) {
+          const elt = tag.content.cloneNode(true)
+          elt.querySelector(".ecount").textContent=ecount;
+          elt.querySelector(".dbd").textContent=date;
+          document.body.append(elt);
+        }
+      }
+    </script>
+    <script>
+      {
+        const num = 1;
+        const ecount = 36;
+        const date = "03/2025"
+        const tag = document.querySelector('#fk-gold');
+
+        for (let n = 0; n < num; n += 1) {
+          const elt = tag.content.cloneNode(true)
+          elt.querySelector(".ecount").textContent=ecount;
+          elt.querySelector(".dbd").textContent=date;
+          document.body.append(elt);
+        }
+      }
+    </script>
+    <script>
+      {
+        const num = 6;
+        const ecount = 36;
+        const date = "02/2025"
+        const tag = document.querySelector('#fk-portra');
+
+        for (let n = 0; n < num; n += 1) {
+          const elt = tag.content.cloneNode(true)
+          elt.querySelector(".ecount").textContent=ecount;
+          elt.querySelector(".dbd").textContent=date;
+          document.body.append(elt);
+        }
+      }
+    </script>
+    <script>
+      {
+        const num = 2;
+        const ecount = 36;
+        const date = "07/2026"
+        const tag = document.querySelector('#fk-cplus');
+
+        for (let n = 0; n < num; n += 1) {
+          const elt = tag.content.cloneNode(true)
+          elt.querySelector(".ecount").textContent=ecount;
+          elt.querySelector(".dbd").textContent=date;
+          document.body.append(elt);
+        }
+      }
+    </script>
+    <script>
+      {
+        const num = 12;
+        const ecount = 24;
+        const date = "09/2026"
+        const tag = document.querySelector('#fk-cplus');
+
+        for (let n = 0; n < num; n += 1) {
+          const elt = tag.content.cloneNode(true)
+          elt.querySelector(".ecount").textContent=ecount;
+          elt.querySelector(".dbd").textContent=date;
+          document.body.append(elt);
+        }
+      }
+    </script>
+  </body>
+</html>

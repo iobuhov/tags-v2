@@ -1,0 +1,81 @@
+:root {
+  --spacing: 0;
+  --color-kodak-red: #ce2f1e;
+  --color-kodak-yellow: #ffc600;
+  --color-portra: #a587c4;
+  --color-gold: #a832ae;
+  --color-umax: #5687f2;
+  --color-cplus: #eb280e;
+  --color-label-top: black;
+  --color-label-btm: black;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1mm;
+  margin: 1cm;
+  font-family: Helvetica;
+}
+
+.tag {
+  aspect-ratio: 1;
+  width: 46mm;
+  padding: 0 6mm;
+  height: 12.5mm;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid white;
+  background-color: black;
+  .header,
+  .body {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header {
+    align-items: end;
+    background-color: var(--color-label-top);
+    font-weight: bold;
+    color: white;
+    position: relative;
+    text-transform: uppercase;
+    padding-top: 9px;
+    text-align: center;
+    font-size: 10px;
+
+    .brand {
+      color: var(--color-kodak-red);
+    }
+    .mini-info {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      font-size: 6px;
+      background-color: #fff;
+      color: black;
+    }
+  }
+
+  .body {
+    background-color: var(--color-label-btm);
+    font-size: 20px;
+    flex-flow: row nowrap;
+    color: white;
+    text-align: center;
+    align-items: baseline;
+    font-weight: bold;
+    .sm {
+      font-size: 6px;
+    }
+  }
+}

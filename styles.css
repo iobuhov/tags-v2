@@ -1,0 +1,122 @@
+:root {
+  --spacing: 14px;
+  --color-kodak-red: #ce2f1e;
+  --color-kodak-yellow: #ffc600;
+  --color-portra: #a587c4;
+  --color-gold: #a832ae;
+  --color-umax: #5687f2;
+  --color-cplus: #eb280e;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1mm;
+  margin: 1cm;
+  font-family: Helvetica;
+}
+
+.tag {
+  aspect-ratio: 1;
+  width: 32mm;
+  height: 32mm;
+  overflow: hidden;
+  position: relative;
+
+  .header,
+  .body {
+    height: 50%;
+    display: flex;
+    padding: var(--spacing);
+  }
+  .header {
+    align-items: end;
+    background-color: var(--color-kodak-yellow);
+    color: var(--color-kodak-red);
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 0;
+  }
+  .body {
+    font-size: 10px;
+    flex-flow: row nowrap;
+    color: white;
+    padding-top: 4px;
+  }
+  .header .info {
+    color: black;
+    font-size: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .exp {
+    border-bottom: 1px solid;
+  }
+  .exp .sm {
+    font-size: 6px;
+  }
+  .dbl {
+    font-size: 6px;
+    display: inline-flex;
+    flex-flow: column;
+  }
+  .kind {
+    font-size: 14px;
+  }
+  .body .right,
+  .header .info {
+    margin-left: 4px;
+  }
+  .body .right {
+    text-transform: uppercase;
+  }
+}
+
+.kodak-gold {
+  .body {
+    background: var(--color-gold);
+  }
+}
+
+.kodak-umax {
+  .body {
+    background: var(--color-umax);
+  }
+  .kind {
+    font-size: 12px;
+  }
+}
+
+.kodak-cplus {
+  .body {
+    background: var(--color-cplus);
+  }
+  .kind {
+    font-size: 12px;
+  }
+}
+
+.kodak-portra {
+  .body {
+    background-color: var(--color-portra);
+  }
+}
+
+.point {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: white;
+  z-index: 3;
+  border-radius: 50%;
+}
