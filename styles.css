@@ -6,6 +6,7 @@
   --color-gold: #a832ae;
   --color-umax: #5687f2;
   --color-cplus: #eb280e;
+  --color-vision3: #000000;
 }
 *,
 *::before,
@@ -104,6 +105,12 @@ body {
 .kodak-portra {
   .body {
     background-color: var(--color-portra);
+  }
+}
+
+.kodak-vision3 {
+  .body {
+    background-color: var(--color-vision3);
   }
 }
 

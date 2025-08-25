@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="fk-label.css" rel="stylesheet" type="text/css" />
+    <title>Film tags</title>
+  </head>
+  <body>
+    <template id="fk-label">
+      <div class="box">
+        <div class="tag kodak-vision3">
+          <div class="header">
+            <div class="mini-info">VISION3-250D-24</div>
+            <span class="brand">Kodak</span>&nbsp;<span>VISION3</span>
+          </div>
+          <div class="body">
+            250D 24
+            <span class="sm">exp.</span>
+          </div>
+        </div>
+        <div class="tag kodak-vision3">
+          <div class="header">
+            <div class="mini-info">VISION3-250D-24</div>
+            <span class="brand">Kodak</span>&nbsp;<span>VISION3</span>
+          </div>
+          <div class="body">
+            250D 24
+            <span class="sm">exp.</span>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <script>
+      {
+        const num = 8;
+        // const ecount = 36;
+        // const date = "04/2027"
+        const tag = document.querySelector('#fk-label');
+
+        for (let n = 0; n < num; n += 1) {
+          const elt = tag.content.cloneNode(true)
+          // elt.querySelector(".ecount").textContent=ecount;
+          // elt.querySelector(".dbd").textContent=date;
+          document.body.append(elt);
+        }
+      }
+    </script>
+  </body>
+</html>
