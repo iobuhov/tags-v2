@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 5mm;
+}
+
+.box {
+  width: 114mm;
+  height: 195mm;
+  border: 1px dashed;
+  box-sizing: border-box;
+  display: grid;
+  row-gap: 5mm;
+  column-gap: 5mm;
+  grid-template-columns: repeat(3, 33mm);
+  grid-template-rows: repeat(5, 33mm);
+  align-content: center;
+  justify-content: center;
+}
+
+.tag {
+  width: 33mm;
+  height: 33mm;
+  /* background-color: rgb(164, 255, 179); */
+  border-radius: 50%;
+  border: 1px solid;
+  position: relative;
+}
+.point {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background: rgb(0, 0, 0);
+}

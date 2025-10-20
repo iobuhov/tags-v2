@@ -1,0 +1,37 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  width: 140mm;
+  height: 115mm;
+  border: 1px solid;
+  box-sizing: content-box;
+  display: grid;
+  column-gap: 5.5mm;
+  row-gap: 6mm;
+  grid-template-columns: repeat(4, 31mm);
+  grid-template-rows: repeat(3, 31mm);
+  align-content: center;
+  justify-content: center;
+}
+
+.tag {
+  width: 31mm;
+  height: 31mm;
+  /* background-color: rgb(164, 255, 179); */
+  border-radius: 50%;
+  border: 1px solid;
+  position: relative;
+}
+.point {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background: rgb(0, 0, 0);
+}
