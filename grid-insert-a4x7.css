@@ -1,0 +1,61 @@
+@import "https://unpkg.com/open-props";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 5mm;
+}
+
+.box {
+  --size: 29mm;
+  width: 123mm;
+  height: 191mm;
+  /* border: 1px dashed; */
+  box-sizing: border-box;
+  display: grid;
+  /* row-gap: 2.5mm; */
+  /* column-gap: 1.25mm; */
+  grid-template-columns: repeat(4, var(--size));
+  grid-template-rows: repeat(6, var(--size));
+  align-content: center;
+  justify-content: center;
+  /* background-image: var(--gradient-3); */
+
+  /* background-image: var(--gradient-5); */
+
+  background-image: linear-gradient(
+    15deg,
+    rgb(14, 230, 221) 0%,
+    rgb(67, 221, 223) 11.111%,
+    rgb(84, 208, 226) 22.222%,
+    rgb(53, 194, 228) 33.333%,
+    rgb(0, 178, 231) 44.444%,
+    rgb(0, 160, 233) 55.556%,
+    rgb(0, 142, 236) 66.667%,
+    rgb(0, 123, 238) 77.778%,
+    rgb(38, 105, 240) 88.889%,
+    rgb(80, 87, 243) 100%
+  );
+}
+
+.tag {
+  border-radius: 50%;
+  /* border: 1px solid; */
+  position: relative;
+  /* background-color: white; */
+}
+.point {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background: white;
+}

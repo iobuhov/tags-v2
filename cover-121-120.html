@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radiohead Amnesiac</title>
+    <style>
+      .insert {
+        font-family: monospace;
+        background-color: #000;
+        color: white;
+        width: 121mm;
+        height: 120mm;
+        display: flex;
+        flex-flow: row nowrap;
+        overflow: hidden;
+      }
+      .left {
+        width: 7mm;
+        display: flex;
+        writing-mode: vertical-lr;
+        justify-content: center;
+        align-items: center;
+      }
+      .mid {
+        /* background-image: url("./img/amnesiae.jpg"); */
+        background-size: cover;
+        flex-grow: 1;
+        position: relative;
+        /* filter: blur(3px) */
+      }
+      .songs {
+        position: relative;
+        /* background-color: #00000078; */
+        padding: 1em;
+      }
+      .mid::before {
+        display: block;
+        content: "";
+        width: 100%;
+        height: 100%;
+        /* inset: 0; */
+        position: absolute;
+        z-index: 0;
+        background-image: url("./img/front-cover-a-c.jpg");
+        background-size: cover;
+        /* flex-grow: 1; */
+        /* filter: grayscale(80%); */
+        /* filter: brightness(0.65); */
+      }
+      .right {
+        width: 7mm;
+        display: flex;
+        writing-mode: sideways-lr;
+        justify-content: center;
+        align-items: center;
+      }
+      .red {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="insert">
+      <div class="mid"></div>
+    </div>
+  </body>
+</html>

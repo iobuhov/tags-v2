@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radiohead KID A</title>
+    <style>
+      .insert {
+        font-family: monospace;
+        background-color: #000;
+        color: white;
+        width: 151mm;
+        height: 118mm;
+        display: flex;
+        flex-flow: row nowrap;
+        overflow: hidden;
+      }
+      .left {
+        width: 7mm;
+        display: flex;
+        writing-mode: sideways-lr;
+        justify-content: center;
+        align-items: center;
+      }
+      .mid {
+        /* background-image: url("./img/amnesiae.jpg"); */
+        background-size: cover;
+        flex-grow: 1;
+        position: relative;
+        /* filter: blur(3px) */
+      }
+      .songs {
+        position: relative;
+        /* background-color: #00000078; */
+        padding: 1em;
+      }
+      .mid::before {
+        display: block;
+        content: "";
+        width: 100%;
+        height: 100%;
+        /* inset: 0; */
+        position: absolute;
+        z-index: 0;
+        background-image: url("./img/kida.jpg");
+        background-size: cover;
+        flex-grow: 1;
+        /* filter: grayscale(80%); */
+        filter: brightness(0.65);
+      }
+      .right {
+        width: 7mm;
+        display: flex;
+        writing-mode: vertical-lr;
+        justify-content: center;
+        align-items: center;
+      }
+      .red {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="insert">
+      <div class="left"><span class="red">RADIOHEAD</span>&nbsp;KID A</div>
+      <div class="mid">
+        <div class="songs">
+          <ol>
+            <li>Everything In Its Right Place 4:11</li>
+            <li>Kid A 4:44</li>
+            <li>The National Anthem 5:51</li>
+            <li>How To Disappear Completely 5:56</li>
+            <li>Treefingers 3:42</li>
+            <li>Optimistic 5:15</li>
+            <li>In Limbo 3:31</li>
+            <li>Idioteque 5:09</li>
+            <li>Morning Bell 4:35</li>
+            <li>Motion Picture Soundtrack 7:01</li>
+          </ol>
+        </div>
+      </div>
+      <div class="right"><span class="red">RADIOHEAD</span>&nbsp;KID A</div>
+    </div>
+  </body>
+</html>

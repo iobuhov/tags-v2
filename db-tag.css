@@ -1,0 +1,86 @@
+:root {
+  --spacing: 0;
+  --color-kodak-red: #ce2f1e;
+  --color-kodak-yellow: #ffc600;
+  --color-portra: #a587c4;
+  --color-gold: #a832ae;
+  --color-umax: #5687f2;
+  --color-cplus: #eb280e;
+  --color-label-top: white;
+  --color-label-btm: white;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  width: 195mm;
+  height: 270mm;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1mm;
+  margin: 5mm;
+  font-family: Helvetica;
+  align-content: start;
+  justify-content: center;
+}
+
+.tag {
+  aspect-ratio: 1;
+  width: 38mm;
+  /* padding: 0 6mm; */
+  height: 8mm;
+  /* margin-bottom: 1mm; */
+  overflow: hidden;
+  position: relative;
+  /* border-bottom: 1px solid black; */
+  /* background-color: black; */
+  .header,
+  .body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header {
+    align-items: end;
+    background-color: var(--color-label-top);
+    font-weight: bold;
+    color: black;
+    position: relative;
+    text-transform: uppercase;
+    padding-top: 9px;
+    text-align: center;
+    font-size: 10px;
+
+    .brand {
+      color: var(--color-kodak-red);
+    }
+    .mini-info {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      font-size: 10px;
+      background-color: var(--color-kodak-yellow);
+      color: black;
+    }
+  }
+
+  .body {
+    background-color: var(--color-label-btm);
+    font-size: 20px;
+    flex-flow: row nowrap;
+    color: black;
+    text-align: center;
+    align-items: baseline;
+    font-weight: bold;
+    .sm {
+      font-size: 6px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="db-tag.css" rel="stylesheet" type="text/css" />
+    <title>Develop before tags</title>
+  </head>
+  <body>
+    <template id="fk-label">
+      <div class="tag kodak-vision3">
+        <div class="header">
+          <div class="mini-info">Develop before</div>
+        </div>
+      </div>
+    </template>
+
+    <script>
+      {
+        const num = 150;
+        const tag = document.querySelector('#fk-label');
+
+        for (let n = 0; n < num; n += 1) {
+          const elt = document.createElement('div');
+          elt.append(tag.content.cloneNode(true));
+          elt.classList += "box";
+          document.body.append(elt);
+        }
+      }
+    </script>
+  </body>
+</html>
